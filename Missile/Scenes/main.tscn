@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://pw2c6od407db"]
+
+[ext_resource type="PackedScene" uid="uid://dkt3osav13dcq" path="res://Scenes/missile.tscn" id="1_fl01p"]
+[ext_resource type="PackedScene" uid="uid://6vnj80getk4f" path="res://Scenes/target.tscn" id="2_dtqnd"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Missile" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_fl01p")]
+position = Vector2(-966, 2)
+target = NodePath("../Target")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Target" parent="." instance=ExtResource("2_dtqnd")]
+position = Vector2(917, 20)
+scale = Vector2(0.231165, 0.237232)

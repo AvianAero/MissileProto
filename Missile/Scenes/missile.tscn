@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkt3osav13dcq"]
+
+[ext_resource type="Texture2D" uid="uid://dwv8epvkriajn" path="res://Assets/Missile.png" id="1_foyor"]
+[ext_resource type="Script" path="res://Scripts/missile.gd" id="1_kva3j"]
+
+[node name="Missile" type="RigidBody2D"]
+center_of_mass_mode = 1
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("1_kva3j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-54.4154, -3.37132)
+scale = Vector2(0.180851, 0.178733)
+texture = ExtResource("1_foyor")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-54.4154, -3.37132)
+scale = Vector2(0.180851, 0.178733)
+polygon = PackedVector2Array(-149.4, -126, 64.8, -97, 136.7, -93.1, 141.5, -97, 144.1, -134, 158.8, -122, 225.3, -56, 227.2, -56, 261.2, -29, 263.1, -29, 326.235, 16.7848, 317.3, 28.9, 288.5, 65, 287.3, 65, 263.2, 85, 222.2, 116, 145.5, 158.4, 140.5, 111, 111.8, 112, 60.5, 114.1, 60.5, 112.9, -12.6, 110, -14.4, 110, -166.7, 105.1, -264.6, 100, -266, 100, -290.5, 87.2, -290.5, 85.6, -295.5, 77.6, -299.5, 49.2, -299.5, 28, -301.5, -38, -294.3, -99, -283.9, -102, -251.5, -119)
